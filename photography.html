@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  gap: 10px;
+  background-color: black;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Times New Roman;
+  padding: 30px;
+  background: grey;
+}
+.header h1 {
+  font-size: 50px;
+  padding: 38px;
+  text-align: center;
+  background:silver;
+}
+.topnav {
+  overflow: auto;
+  background-color: gold;
+}
+.topnav a:link {
+  float: left;
+  display: table;
+  color: slategrey;
+  text-align: left;
+  padding: 15px 30px;
+  text-decoration: underline;
+}
+.topnav a:hover {
+  background-color: tan;
+  color: white;
+}
+.leftcolumn {  
+  float: left;
+  width: 85%;
+  background-color:teal;
+}
+.rightcolumn {
+  float: left;
+  width: 15%;
+  background-color: teal;
+  padding-left: 20px;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {  
+    width: 200%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+<div class="header h1">
+<h1>CAPTCHA PHOTOGRAPHY</h1>
+</div>
+<div class="topnav">
+  <a href="#">HOME</a>
+  <a href="#">ABOUT</a>
+  <a href="#" style="float:right">PROFILE</a>
+  <a href="#" style="float:right">CONTACT</a>
+</div>
+<div class="grid-container">
+  <div class="item1">Life is full with photos!<img src="file:///D:/ADP%20assigh/imgp1.jpg" width=100 height=100></div>
+  <div class="item2">Not only as images but as memories<img src="file:///D:/ADP%20assigh/imgp2.jpg" width=100 height=100></div>
+  <div class="item3">Photography is the art, application, and practice of creating images<img src="file:///D:/ADP%20assigh/ingp4.jpg" width=100 height=100></div>  
+  <div class="item4"><img src="file:///D:/ADP%20assigh/imgp3.jpg" width=100 height=100></div>
+  <div class="item5"><img src="file:///D:/ADP%20assigh/imgp5.jpg"></div>
+</div>
+<div class="row">
+<div class="leftcolumn">
+<h2>NATURE</h2>
+</div>
+<div class="rightcolumn">
+<h2>ADORABLE</h2>
+</div>
+<div class="footer">
+<h2>captcha.photography@yahoo.com</h2>
+</div>
+</body>
+</html>
